@@ -1,0 +1,152 @@
+@use '../../styles/variables.scss' as v;
+
+.pickedOption {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  &__pickedComputer {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  &__pickedUser {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pickedUser.winner::after,
+  &__pickedComputer.winner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 5px solid green;
+    /* Customize this color to your preference */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+  }
+
+  &__rock {
+    border: 15px solid v.$ScissorsGradient;
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: inset 0px 20px 7px -8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__scissors {
+    border: 15px solid v.$RockGradient;
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: inset 0px 20px 7px -8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__paper {
+    border: 15px solid v.$PaperGradient;
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: inset 0px 20px 7px -8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  &__icon {
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: inset 0px 20px 7px -8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+
+  &__resultMessage {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+}
+
+.btnRestart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnRestart>button {
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: ease-in-out 0.3s;
+  border: 3px solid white;
+}
+
+.btnRestart>button:hover {
+  border: 3px solid white;
+  background-color: v.$RadialGradient;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.pickedOption__pickedUser.winner::after,
+.pickedOption__pickedComputer.winner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 5px solid green;
+  /* Customize this color to your preference */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}

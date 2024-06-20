@@ -1,0 +1,53 @@
+@use '../../styles/variables.scss' as v;
+
+.mainLogo{
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 100px;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+}
+
+.imageRock{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.rock{
+    border: 15px solid v.$ScissorsGradient;
+    position: absolute;
+    top: -100px;
+}
+
+.scissors{
+    border: 15px solid v.$RockGradient;
+    position: relative;
+    top: -350px;
+    right: 150px;
+}
+
+.paper{
+    position: absolute;
+    top: -350px;
+    right: 650px;
+    border: 15px solid v.$PaperGradient;
+}
+
+.rock, .scissors, .paper{
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: inset 0px 20px 7px -8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}

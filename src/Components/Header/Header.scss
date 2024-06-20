@@ -1,0 +1,34 @@
+@use '../../styles/variables.scss' as v;
+
+.header {
+    display: flex;
+    border: 1px solid v.$HeaderOutline;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+    }
+
+    &__title>p {
+        margin: 0;
+    }
+
+    &__score {
+        display: flex;
+        background-color: white;
+        margin: 10px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: v.$ScoreText;
+        padding: 0px 15px;
+        gap: 2rem;
+    }
+}
